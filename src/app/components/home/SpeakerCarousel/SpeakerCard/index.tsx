@@ -1,4 +1,4 @@
-import { Globe, Instagram } from "lucide-react";
+import { Globe, Instagram } from 'lucide-react';
 
 interface SpeakerCardProps {
     name: string;
@@ -8,21 +8,19 @@ interface SpeakerCardProps {
     className?: string;
 }
 
-export default function SpeakerCard({ 
+export default function SpeakerCard({
     name,
     description,
     instagramLink,
     websiteLink,
-    className
- }: SpeakerCardProps) {
+    className,
+}: SpeakerCardProps) {
     return (
         <div className={`min-w-64 max-w-64 h-[372px] rounded-lg flex flex-col ${className}`}>
             <div className="h-2/5 bg-[#7B7B7B] rounded-lg"></div>
             <div className="py-4 h-3/5 px-4 bg-white">
                 <h1 className="font-black text-xl pb-2">{name}</h1>
-                <p className="text-sm text-justify">
-                    {description}
-                </p>
+                <p className="text-sm text-justify">{description}</p>
                 <div className="h-2/5 flex justify-center items-center gap-6">
                     <a href={instagramLink} target="_blank">
                         <div className="bg-[#7B7B7B] w-8 h-8 flex justify-center items-center rounded-full transition-all cursor-pointer hover:bg-[#F0F0F0]">
@@ -37,5 +35,5 @@ export default function SpeakerCard({
                 </div>
             </div>
         </div>
-    )
+    );
 }

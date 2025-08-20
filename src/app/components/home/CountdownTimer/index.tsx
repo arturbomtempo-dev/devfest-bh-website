@@ -1,6 +1,6 @@
-"use client";
-import { useState, useEffect, useCallback, useMemo } from "react";
-import CountdownElement from "./CountdownElement";
+'use client';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import CountdownElement from './CountdownElement';
 
 interface TimeRemaining {
     days: string;
@@ -27,7 +27,7 @@ const calculateTimeRemaining = (targetDate: Date): TimeRemaining => {
 };
 
 export default function CountdownTimer() {
-    const targetDate = useMemo(() => new Date("2024-10-26T08:00:00-03:00"), []);
+    const targetDate = useMemo(() => new Date('2024-10-26T08:00:00-03:00'), []);
     const [timeRemaining, setTimeRemaining] = useState<TimeRemaining | null>(null);
     const [isMounted, setIsMounted] = useState(false);
 
@@ -46,10 +46,26 @@ export default function CountdownTimer() {
 
     return (
         <section className="container py-9 overflow-hidden mx-auto flex justify-center items-center flex-wrap gap-9">
-            <CountdownElement remainingQuantity={timeRemaining?.days || '00'} contentType="dias" bgColor="red" />
-            <CountdownElement remainingQuantity={timeRemaining?.hours || '00'} contentType="horas" bgColor="blue" />
-            <CountdownElement remainingQuantity={timeRemaining?.minutes || '00'} contentType="minutos" bgColor="green" />
-            <CountdownElement remainingQuantity={timeRemaining?.seconds || '00'} contentType="segundos" bgColor="yellow" />
+            <CountdownElement
+                remainingQuantity={timeRemaining?.days || '00'}
+                contentType="dias"
+                bgColor="red"
+            />
+            <CountdownElement
+                remainingQuantity={timeRemaining?.hours || '00'}
+                contentType="horas"
+                bgColor="blue"
+            />
+            <CountdownElement
+                remainingQuantity={timeRemaining?.minutes || '00'}
+                contentType="minutos"
+                bgColor="green"
+            />
+            <CountdownElement
+                remainingQuantity={timeRemaining?.seconds || '00'}
+                contentType="segundos"
+                bgColor="yellow"
+            />
         </section>
     );
 }

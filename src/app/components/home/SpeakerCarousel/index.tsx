@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-import SpeakerCard from "./SpeakerCard";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import SpeakerCard from './SpeakerCard';
 
 export default function SpeakerCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,7 +42,7 @@ export default function SpeakerCarousel() {
             setScreenWidth(newWidthClass);
             setTranslateValue(newTranslateValue);
             setVisibleCardsCount(newVisibleCardsCount);
-        }
+        };
 
         checkScreenWidth();
         window.addEventListener('resize', checkScreenWidth);
@@ -75,7 +75,11 @@ export default function SpeakerCarousel() {
                 onClick={handlePrev}
             />
             <div className="overflow-hidden w-full">
-                <div ref={cardContainerRef} className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentIndex * translateValue}%)` }}>
+                <div
+                    ref={cardContainerRef}
+                    className="flex transition-transform duration-300 ease-in-out"
+                    style={{ transform: `translateX(-${currentIndex * translateValue}%)` }}
+                >
                     <div className={`flex-none ${screenWidth} flex justify-center`}>
                         <SpeakerCard
                             name="Lorem ipsum dolor."
@@ -86,7 +90,7 @@ export default function SpeakerCarousel() {
                         />
                     </div>
                     <div className={`flex-none ${screenWidth} flex justify-center`}>
-                        <SpeakerCard 
+                        <SpeakerCard
                             name="Lorem ipsum dolor."
                             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien elit, dapibus ut lectus quis, tincidunt congue ex. Lorem ipsum"
                             instagramLink="https://www.instagram.com/"
@@ -95,7 +99,7 @@ export default function SpeakerCarousel() {
                         />
                     </div>
                     <div className={`flex-none ${screenWidth} flex justify-center`}>
-                        <SpeakerCard 
+                        <SpeakerCard
                             name="Lorem ipsum dolor."
                             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien elit, dapibus ut lectus quis, tincidunt congue ex. Lorem ipsum"
                             instagramLink="https://www.instagram.com/"
@@ -104,7 +108,7 @@ export default function SpeakerCarousel() {
                         />
                     </div>
                     <div className={`flex-none ${screenWidth} flex justify-center`}>
-                        <SpeakerCard 
+                        <SpeakerCard
                             name="Lorem ipsum dolor."
                             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien elit, dapibus ut lectus quis, tincidunt congue ex. Lorem ipsum"
                             instagramLink="https://www.instagram.com/"

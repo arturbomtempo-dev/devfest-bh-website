@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 interface HomeButtonProps {
     children: ReactNode;
@@ -13,5 +13,5 @@ export default function HomeButton({ children, border, link }: HomeButtonProps) 
         <a href={link} className={className}>
             {children}
         </a>
-    )
+    );
 }
