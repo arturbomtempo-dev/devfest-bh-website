@@ -11,7 +11,16 @@ interface TimeRemaining {
 
 const calculateTimeRemaining = (targetDate: Date): TimeRemaining => {
     const now = new Date();
-    const difference = targetDate.getTime() - now.getTime();
+    let difference = targetDate.getTime() - now.getTime();
+
+    if (difference <= 0) {
+        return {
+            days: '00',
+            hours: '00',
+            minutes: '00',
+            seconds: '00',
+        };
+    }
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
