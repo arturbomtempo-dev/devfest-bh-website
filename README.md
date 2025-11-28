@@ -9,7 +9,7 @@
         src="./resources/banner/banner.jpeg"
         alt="Banner image"
     />
-
+</div>
 <br>
 <div align="center">
     <a href="https://nextjs.org/docs" target="_blank"><img src="https://img.shields.io/badge/made_with-Next.js-lightgray" alt="Made with Node.js"></a>
