@@ -9,7 +9,7 @@
         src="./resources/banner/banner.jpeg"
         alt="Banner image"
     />
-</div>
+
 <br>
 <div align="center">
     <a href="https://nextjs.org/docs" target="_blank"><img src="https://img.shields.io/badge/made_with-Next.js-lightgray" alt="Made with Node.js"></a>
@@ -51,7 +51,7 @@ Below, you will find example images of the application’s front-end, showcasing
 
 -   Home / Main Section
 
-![Home / Main Section](./resources/screenshots/main-section.png)
+![Home / Main Section](https://github.com/user-attachments/assets/1b43e564-ae07-4bdf-a6ec-92f5884e2b12)
 
 -   About DevFest
 
